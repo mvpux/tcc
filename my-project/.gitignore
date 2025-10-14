@@ -1,0 +1,38 @@
+gitignore
+# ───────────────────────────────
+# NODE E DEPENDÊNCIAS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ───────────────────────────────
+# BUILD E ARQUIVOS GERADOS
+dist/
+build/
+out/
+.next/
+coverage/
+
+# ───────────────────────────────
+# CONFIGURAÇÕES LOCAIS
+.vscode/
+.idea/
+.DS_Store
+.env
+.env.*
+*.local
+
+# ───────────────────────────────
+# TOKENS DO FIGMA / AUTOMATIONS
+tokens/backup/
+tokens/*.backup.json
+tokens/*.lock.json
+tokens/*.tmp
+.figma-tokens/
+
+# ───────────────────────────────
+# LOGS E SISTEMAS
+*.log
+Thumbs.db
