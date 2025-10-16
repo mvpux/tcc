@@ -1,8 +1,8 @@
 // Entry point: Sets up an Express server to serve the index page
 // Import Express (web server framework)
 // Import Express and path using CommonJS require for compatibility
-const express = require('express');
-const path = require('path');
+import express from 'express';
+import path from 'path';
 // __dirname is available by default in CommonJS
 
 // Create an Express app
