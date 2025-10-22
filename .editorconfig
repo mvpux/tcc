@@ -1,19 +1,35 @@
+# EditorConfig ajuda a manter estilos consistentes entre IDEs e usuários
+# https://editorconfig.org
 root = true
 
+# Configurações padrão para todos os arquivos
 [*]
-indent_style = space
-indent_size = 2
-end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
+end_of_line = lf
 insert_final_newline = true
-
-[*.ts]
-indent_size = 2
-
-[*.json]
+trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
+max_line_length = 100
 
+# Arquivos Markdown - preservar espaços no final (podem ser quebras de linha)
 [*.md]
 trim_trailing_whitespace = false
+max_line_length = off
+
+# Arquivos JSON, YAML e similares
+[*.{json,yml,yaml}]
+indent_size = 2
+
+# Arquivos TS/JS/React
+[*.{js,jsx,ts,tsx}]
+indent_size = 2
+quote_type = single
+
+# Makefiles devem usar tabs
+[Makefile]
+indent_style = tab
+
+# Arquivos batch do Windows
+[*.{cmd,bat}]
+end_of_line = crlf

@@ -1,37 +1,57 @@
 {
   "name": "my-project",
   "version": "1.0.0",
-  "description": "A brief description of your project",
-  "main": "src/main.tsx",
+  "description": "Projeto React + Vite com integração de Design Tokens do Figma",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "build:tokens": "style-dictionary build --config style-dictionary.config.js",
-    "clean:tokens": "rm -rf build/",
+    "clean:tokens": "rimraf build/",
     "fetch:tokens": "figma-export tokens --config tokens/figma-settings.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "test": "echo 'No tests configured yet'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mvpux/tcc/my-project.git"
   },
-  "keywords": [],
-  "author": "Your Name",
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "style-dictionary",
+    "design-tokens"
+  ],
+  "author": "Marcus Sousa",
   "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
-    "@types/node": "^24.9.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "@vitejs/plugin-react": "^5.0.4",
-    "eslint": "^7.0.0",
-    "prettier": "^2.0.0",
-    "style-dictionary": "^5.1.1",
-    "typescript": "^4.0.0",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "style-dictionary": "^3.9.2",
+    "typescript": "^5.3.3",
     "vite": "^7.1.11"
   },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
