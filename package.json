@@ -1,0 +1,37 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "A brief description of your project",
+  "main": "src/main.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:tokens": "style-dictionary build --config style-dictionary.config.js",
+    "clean:tokens": "rm -rf build/",
+    "fetch:tokens": "figma-export tokens --config tokens/figma-settings.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvpux/tcc/my-project.git"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^7.0.0",
+    "prettier": "^2.0.0",
+    "style-dictionary": "^5.1.1",
+    "typescript": "^4.0.0",
+    "vite": "^7.1.11"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
